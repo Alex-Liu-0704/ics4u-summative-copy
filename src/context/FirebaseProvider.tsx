@@ -7,15 +7,16 @@ import {
   CART_KEY,
   FAVORITES_KEY,
   type ImageCell,
+  type Media,
   MOVIE_GENRES,
   MOVIE_GENRES_KEY,
-  type Media,
   TV_GENRES,
   TV_GENRES_KEY,
   USERNAME_KEY,
-  type UserDocument,
 } from "@/core";
 import { useLocalStorage } from "@/hooks";
+
+console.log("FirebaseProvider render");
 
 const firebaseConfig = {
   apiKey: "AIzaSyCwH45YTdf8WfwIy71snmt4jhdJuaCnjX0",
@@ -41,7 +42,7 @@ export const FirebaseProvider = ({ children }: { children: React.ReactNode }) =>
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       try {
         if (user) {
-          const snapshot = await getDoc(doc(firestore, "users", user.uid));
+          const _snapshot = await getDoc(doc(firestore, "users", user.uid));
           // const favoritesData: UserDocument = snapshot.exists() ? snapshot.data().favorites : {};
           setUser(user);
           // setFavorites(new Map(Object.entries(favoritesData).map(([k, v]) => [Number(k), v as unknown as ImageCell])));
@@ -185,9 +186,9 @@ export const FirebaseProvider = ({ children }: { children: React.ReactNode }) =>
         changePassword,
         clearFavorites,
         emptyCart,
+        favorites,
         // favorites,
         firestore,
-        favorites,
         movieGenres,
         refreshUser,
         saveGenres,

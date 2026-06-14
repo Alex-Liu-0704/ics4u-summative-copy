@@ -1,13 +1,12 @@
+import { signOut } from "firebase/auth";
 import { useState } from "react";
 import { BsCart2 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
-import { GoGear } from "react-icons/go";
+import { GoGear, GoSignOut } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import { ButtonGroup, LinkGroup, SearchBar } from "@/components";
 import { ICON_SIZE } from "@/core";
 import { useFirebaseContext } from "@/hooks";
-import { signOut } from "firebase/auth";
-import { GoSignOut } from "react-icons/go";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -68,7 +67,7 @@ export const Header = () => {
         <div className="flex w-full items-center justify-between">
           <div className="mr-2 flex items-center gap-3 rounded-full border border-gray-700 bg-gray-800 px-3 py-1">
             {user?.photoURL && (
-              <img src={user.photoURL} alt="avatar" className="size-8 rounded-full object-cover ring-2 ring-blue-500/30" />
+              <img alt="avatar" className="size-8 rounded-full object-cover ring-2 ring-blue-500/30" src={user.photoURL} />
             )}
             <span className="font-semibold text-sm">
               Welcome, <span className="hidden font-medium text-gray-200 text-sm sm:inline">{user?.displayName ?? userName}</span>

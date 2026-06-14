@@ -36,7 +36,7 @@ export const SignInView = () => {
         setUser((await signInWithEmailAndPassword(auth, email, password)).user);
       }
 
-      navigate("/movies/category/now-playing");
+      navigate("/movies/category/now_playing");
     } catch (error) {
       console.error("Firebase auth submit failed:", error);
       setError((error as FirebaseError).message);

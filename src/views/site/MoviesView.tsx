@@ -22,6 +22,8 @@ export const MoviesView = () => {
     secondaryText: `$${getPrice(result.release_date ?? "")}`,
   }));
 
+  console.log("MoviesView render");
+
   useEffect(() => {
     setPage(1);
   }, []);
