@@ -1,0 +1,26 @@
+export const GENRES = {
+  movie: [
+    { id: "28", label: "Action", value: "action" },
+    { id: "12", label: "Adventure", value: "adventure" },
+    { id: "16", label: "Animation", value: "animation" },
+    { id: "80", label: "Crime", value: "crime" },
+    { id: "10751", label: "Family", value: "family" },
+    { id: "14", label: "Fantasy", value: "fantasy" },
+    { id: "36", label: "History", value: "history" },
+    { id: "27", label: "Horror", value: "horror" },
+    { id: "9648", label: "Mystery", value: "mystery" },
+    { id: "878", label: "Sci-Fi", value: "sci-fi" },
+  ],
+  tv: [
+    { id: "10759", label: "Action", value: "action" },
+    { id: "16", label: "Animation", value: "animation" },
+    { id: "35", label: "Comedy", value: "comedy" },
+    { id: "80", label: "Crime", value: "crime" },
+    { id: "99", label: "Documentary", value: "documentary" },
+    { id: "18", label: "Drama", value: "drama" },
+    { id: "10751", label: "Family", value: "family" },
+    { id: "10762", label: "Kids", value: "kids" },
+    { id: "9648", label: "Mystery", value: "mystery" },
+    { id: "10765", label: "Sci-Fi", value: "sci-fi" },
+  ],
+};

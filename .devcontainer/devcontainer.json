@@ -1,0 +1,65 @@
+{
+  "name": "Node Environment",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome",
+        "bradlc.vscode-tailwindcss",
+        "davidanson.vscode-markdownlint",
+        "dsznajder.es7-react-js-snippets",
+        "formulahendry.auto-rename-tag",
+        "github.vscode-pull-request-github",
+        "mathematic.vscode-pdf",
+        "ritwickdey.liveserver",
+        "shouples-dev.folder-in-new-window",
+        "streetsidesoftware.code-spell-checker",
+        "vscode-icons-team.vscode-icons"
+      ],
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.biome": "always",
+          "source.organizeImports.biome": "always"
+        },
+        "editor.codeLens": false,
+        "editor.formatOnSave": true,
+        "editor.inlayHints.enabled": "off",
+        "github.copilot.chat.enabled": false,
+        "github.copilot.editor.enableCodeActions": false,
+        "github.copilot.inlineSuggest.enable": false,
+        "terminal.integrated.defaultProfile.windows": "Git Bash",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.defaultProfile.osx": "bash",
+        "[html]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[javascript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "npm install && npm run dev"
+}
